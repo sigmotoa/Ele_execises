@@ -63,7 +63,7 @@ loop:
 ; ***********************************
 
 delay_principal:
-	ldi r17, 250
+	ldi r17, 8
 	
 ciclo_externo:
 	ldi r18, 250
