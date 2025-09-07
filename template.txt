@@ -1,6 +1,8 @@
 ; ======================
 ; Plantilla para programar en assembler AVR
 ; Familias ATtiny usando avr-gcc/avr-as
+; by: sigmotoa -> www.sigmotoa.com
+; github: www.github.com/sigmotoa
 ; ======================
 ;
 ; ***********************************
