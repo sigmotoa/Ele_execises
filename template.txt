@@ -1,0 +1,79 @@
+; ======================
+; Plantilla para programar en assembler AVR
+; Familias ATtiny usando avr-gcc/avr-as
+; ======================
+;
+; ***********************************
+; *INFORMACIÓN DEL PROYECTO*
+; ***********************************
+;
+; *PROYECTO: [Nombre del proyecto]
+; *AUTOR: sigmotoa
+; *FECHA: dd/mm/aaaa
+; *VERSION: 0.0.1
+;
+; *DESCRIPCIÓN:
+; Que hace el proyecto desde la funcionalidad
+;
+; *HARDWARE:
+; *MCU:	Microcontrolador a usar
+; *Clock: Frecuencia del Oscilador interno o externo
+; 
+; *CONEXIONES:
+; PB0 - Que lleva conectado/configuración/modo
+; .... Otros pines/puertos
+; 
+;
+; *NOTAS:
+; Considerciones especiales que se deban mencionar
+;
+; ***********************************
+; * DEFINICIONES *
+; ***********************************
+; Se incluyen los archivos con las definiciones de elementos que ayudan al proyecto
+; se deben adicionar al inicio de todo proyecto
+; adicionar como se muestra a continuacion
+;
+.include "tn45def.inc"
+;
+; ***********************************
+;  * VECTOR DE RESET *
+; ************************************
+; Se hacen los ajustes que indican donde inicia el programa
+;
+.org 0x0000		; Vector de RESET
+	rjmp main	; Saltar al programa principal
+;
+; ***********************************
+; * RUTINA PRINCIPAL *
+; ***********************************
+; Se configuran las direcciones y modos de los pines/puertos
+main:
+	ldi r16, 1	;carga un 0b00000001 en el registro r16
+	out DDRB, r16	;mueve el valor del registro al regitro de direcciones haciendo que el bit 0 del puerto sea de salida, PB0
+;
+;
+; ***********************************
+; * CICLO PRINCIPAL *
+; ***********************************
+; Rutina que se ejecuta indefinidamente
+loop
+	sbi PORTB, 0	;poner en alto el PORTB0
+	rjmp loop	;volver al inicio del ciclo
+;
+; ===================================
+; NOTAS:
+; Pueden tenerse subrutinas que sean llamadas desde el loop
+; En conclusión La estructura propuesta es:
+;
+; * Descripcion Proyecto
+; * Incluir definiciones (tambien se pueden nombrar "variables"
+; * Vector de Reset
+; * main: para la inicialización
+; * loop: para ciclo de ejecución
+; * subrutinas
+; 
+; * Usar comentarios puede ser util 
+
+
+  
