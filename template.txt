@@ -43,6 +43,7 @@
 ; ************************************
 ; Se hacen los ajustes que indican donde inicia el programa
 ;
+.global main		; xporta y hace global la etiqueta main
 .org 0x0000		; Vector de RESET
 	rjmp main	; Saltar al programa principal
 ;
