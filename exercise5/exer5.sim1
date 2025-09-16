@@ -1,3 +1,27 @@
 <circuit version="1.1.0-SR1" rev="2005" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
 
+<item itemtype="MCU" CircId="tiny45-11" mainComp="false" Show_id="true" Show_Val="false" Pos="-24,-84" rotation="0" hflip="1" vflip="1" label="tiny45-11" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Program="build_main/main.hex" Auto_Load="false" saveEepr="true" Logic_Symbol="false" Rst_enabled="false" Ext_Osc="false" Wdt_enabled="false" Clk_Out="false" varList="DDRB,PORTB,R17,PINB" MainMcu="true" />
+
+<item itemtype="Push" CircId="Push-12" mainComp="false" Show_id="false" Show_Val="false" Pos="64,-80" rotation="0" hflip="1" vflip="1" label="Push-12" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1" />
+
+<item itemtype="Resistor" CircId="Resistor-13" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="56,-40" rotation="0" hflip="1" vflip="1" label="Resistor-13" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="100 Ω" />
+
+<item itemtype="Led" CircId="Led-14" mainComp="false" Show_id="false" Show_Val="false" Pos="96,-40" rotation="0" hflip="1" vflip="1" label="Led-14" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="Purple" Grounded="false" Threshold="3.5 V" MaxCurrent="30 mA" Resistance="0.6 Ω" />
+
+<item itemtype="Ground" CircId="Ground-15" mainComp="false" Show_id="false" Show_Val="false" Pos="128,-16" rotation="0" hflip="1" vflip="1" label="Ground-15" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Node" CircId="Node-16" mainComp="false" Pos="128,-40" />
+
+<item itemtype="Connector" uid="Connector-1" startpinid="Push-12-pinP0" endpinid="tiny45-11-PORTB1" pointList="48,-80,40,-80,40,-60,16,-60" />
+
+<item itemtype="Connector" uid="Connector-2" startpinid="Resistor-13-lPin" endpinid="tiny45-11-PORTB0" pointList="40,-40,16,-40,16,-52" />
+
+<item itemtype="Connector" uid="Connector-3" startpinid="Led-14-lPin" endpinid="Resistor-13-rPin" pointList="80,-40,72,-40" />
+
+<item itemtype="Connector" uid="Connector-5" startpinid="Push-12-switch0pinN" endpinid="Node-16-1" pointList="80,-80,128,-80,128,-40" />
+
+<item itemtype="Connector" uid="Connector-6" startpinid="Ground-15-Gnd" endpinid="Node-16-0" pointList="128,-32,128,-40" />
+
+<item itemtype="Connector" uid="Connector-7" startpinid="Node-16-2" endpinid="Led-14-rPin" pointList="128,-40,112,-40" />
+
 </circuit>
