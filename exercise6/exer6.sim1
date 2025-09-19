@@ -1,6 +1,6 @@
 <circuit version="1.1.0-SR1" rev="2005" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
 
-<item itemtype="MCU" CircId="tiny45-1" mainComp="false" Show_id="true" Show_Val="false" Pos="-56,-104" rotation="0" hflip="1" vflip="1" label="tiny45-1" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Program="build_main/main.hex" Auto_Load="false" saveEepr="true" Logic_Symbol="false" Rst_enabled="false" Ext_Osc="false" Wdt_enabled="false" Clk_Out="false" varList="R18" MainMcu="true" />
+<item itemtype="MCU" CircId="tiny45-1" mainComp="false" Show_id="true" Show_Val="false" Pos="-56,-104" rotation="0" hflip="1" vflip="1" label="tiny45-1" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Program="build_main/main.hex" Auto_Load="false" saveEepr="true" Logic_Symbol="false" Rst_enabled="false" Ext_Osc="false" Wdt_enabled="false" Clk_Out="false" varList="R18,PORTB,PINB,R19,R20,R21" MainMcu="true" />
 
 <item itemtype="Push" CircId="Push-2" mainComp="false" Show_id="false" Show_Val="false" Pos="-8,-176" rotation="0" hflip="1" vflip="1" label="Push-2" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1" />
 
@@ -8,9 +8,9 @@
 
 <item itemtype="Resistor" CircId="Resistor-5" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="12,-212" rotation="0" hflip="1" vflip="1" label="Resistor-5" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="100 Ω" />
 
-<item itemtype="Led" CircId="Led-6" mainComp="false" Show_id="false" Show_Val="false" Pos="52,-212" rotation="0" hflip="1" vflip="1" label="Led-6" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="Yellow" Grounded="false" Threshold="2.4 V" MaxCurrent="30 mA" Resistance="0.6 Ω" />
+<item itemtype="Led" CircId="Led-6" mainComp="false" Show_id="false" Show_Val="false" Pos="52,-212" rotation="0" hflip="1" vflip="1" label="Led-6" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="Green" Grounded="false" Threshold="3.5 V" MaxCurrent="30 mA" Resistance="0.6 Ω" />
 
-<item itemtype="Seven Segment" CircId="Seven Segment-7" mainComp="false" Show_id="false" Show_Val="false" Pos="128,-88" rotation="0" hflip="1" vflip="1" label="Seven Segment-7" idLabPos="20,-44" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="Yellow" NumDisplays="1" Vertical_Pins="false" CommonCathode="true" Threshold="2.4 V" MaxCurrent="20 mA" Resistance="1 Ω" />
+<item itemtype="Seven Segment" CircId="Seven Segment-7" mainComp="false" Show_id="false" Show_Val="false" Pos="128,-88" rotation="0" hflip="1" vflip="1" label="Seven Segment-7" idLabPos="20,-44" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="Orange" NumDisplays="1" Vertical_Pins="false" CommonCathode="true" Threshold="2.4 V" MaxCurrent="20 mA" Resistance="1 Ω" />
 
 <item itemtype="BcdTo7S" CircId="BcdTo7S-8" mainComp="false" Show_id="false" Show_Val="false" Pos="72,-88" rotation="0" hflip="1" vflip="1" label="BcdTo7S-8" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Input_High_V="2.5 V" Input_Low_V="2.5 V" Input_Imped="1000 MΩ" Invert_Inputs="false" Out_High_V="5 V" Out_Low_V="0 V" Out_Imped="40 Ω" Inverted="false" Open_Collector="false" pd_n="1 _Gates" Tpd_ps="10 ns" Tr_ps="3 ns" Tf_ps="4 ns" />
 
@@ -40,8 +40,6 @@
 
 <item itemtype="Connector" uid="Connector-15" startpinid="tiny45-1-PORTB3" endpinid="BcdTo7S-8-in3" pointList="-64,-88,-72,-88,-72,-132,32,-132,32,-72,48,-72" />
 
-<item itemtype="Connector" uid="Connector-16" startpinid="Led-6-lPin" endpinid="Resistor-5-rPin" pointList="36,-212,28,-212" />
-
 <item itemtype="Connector" uid="Connector-20" startpinid="Push-2-pinP0" endpinid="tiny45-1-PORTB5" pointList="-24,-176,-64,-176,-64,-96" />
 
 <item itemtype="Connector" uid="Connector-21" startpinid="Push-2-switch0pinN" endpinid="Node-9-1" pointList="8,-176,88,-176,88,-172" />
@@ -55,5 +53,7 @@
 <item itemtype="Connector" uid="Connector-26" startpinid="Node-10-2" endpinid="Ground-4-Gnd" pointList="132,-172,132,-172" />
 
 <item itemtype="Connector" uid="Connector-17" startpinid="Resistor-5-lPin" endpinid="tiny45-1-PORTB4" pointList="-4,-212,-68,-212,-68,-80,-64,-80" />
+
+<item itemtype="Connector" uid="Connector-30" startpinid="Led-6-lPin" endpinid="Resistor-5-rPin" pointList="36,-212,28,-212" />
 
 </circuit>
